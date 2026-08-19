@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="script.js" defer></script>
+    <title>Typing Speed Tester ⌨️</title>
+  </head>
+  <body>
+    <main class="app-layout">
+      <header class="project-header">
+        <div class="project-brand">
+          <div class="project-icon">
+            <i data-lucide="keyboard"></i>
+          </div>
+
+          <h2>Typing Speed <span>Tester</span></h2>
+        </div>
+
+        <div class="header-actions">
+          <button
+            class="theme-btn"
+            id="themeBtn"
+            type="button"
+            aria-label="Toggle theme"
+          >
+            <i data-lucide="sun"></i>
+          </button>
+
+          <button class="info-btn" id="infoBtn" type="button">
+            <span>How It Works</span>
+            <i data-lucide="info"></i>
+          </button>
+        </div>
+      </header>
+
+      <section class="main-content">
+        <div class="test-intro">
+          <div class="intro-badge">
+            <i data-lucide="zap"></i>
+          </div>
+
+          <h1>Test Your <span>Typing Speed</span></h1>
+
+          <p>Type the text below as quickly and accurately as you can!</p>
+        </div>
+
+        <div class="stats-bar">
+          <!-- TIME -->
+          <div class="stat-item">
+            <div class="stat-icon time-icon">
+              <i data-lucide="clock-3"></i>
+            </div>
+
+            <div class="stat-info">
+              <span class="stat-label">Time</span>
+
+              <p class="stat-value">
+                <span id="timeValue">60</span>
+                <small>s</small>
+              </p>
+            </div>
+          </div>
+
+          <!-- WPM -->
+          <div class="stat-item">
+            <div class="stat-icon wpm-icon">
+              <i data-lucide="gauge"></i>
+            </div>
+
+            <div class="stat-info">
+              <span class="stat-label">WPM</span>
+              <p class="stat-value" id="wpmValue">0</p>
+            </div>
+          </div>
+
+          <!-- ACCURACY -->
+          <div class="stat-item">
+            <div class="stat-icon accuracy-icon">
+              <i data-lucide="target"></i>
+            </div>
+
+            <div class="stat-info">
+              <span class="stat-label">Accuracy</span>
+              <p class="stat-value" id="accuracyValue">100%</p>
+            </div>
+          </div>
+
+          <!-- MISTAKES -->
+          <div class="stat-item">
+            <div class="stat-icon mistakes-icon">
+              <i data-lucide="circle-x"></i>
+            </div>
+
+            <div class="stat-info">
+              <span class="stat-label">Mistakes</span>
+              <p class="stat-value" id="mistakesValue">0</p>
+            </div>
+          </div>
+
+          <!-- PROGRESS -->
+          <div class="stat-item">
+            <div class="stat-icon progress-icon">
+              <i data-lucide="flag"></i>
+            </div>
+
+            <div class="stat-info">
+              <span class="stat-label">Progress</span>
+              <p class="stat-value" id="progressValue">0%</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="typing-section">
+        <div class="text-display" id="textDisplay">
+          <p id="textToType">
+            The quick brown fox jumps over the lazy dog. This is a sample text
+            to test your typing speed and accuracy. Try to type this entire text
+            as fast and as accurately as possible. Good luck!
+          </p>
+        </div>
+
+        <div class="typing-input-wrapper">
+          <textarea
+            id="typingInput"
+            class="typing-input"
+            placeholder="Start typing here..."
+            spellcheck="false"
+          ></textarea>
+        </div>
+
+        <div class="bottom-grid">
+          <section class="results-card">
+            <div class="results-title">
+              <i data-lucide="chart-no-axes-column"></i>
+              <h3>Results</h3>
+            </div>
+
+            <div class="result-row">
+              <span>Best WPM</span>
+              <strong id="bestWpm">0</strong>
+            </div>
+
+            <div class="result-row">
+              <span>Best Accuracy</span>
+              <strong id="bestAccuracy">100%</strong>
+            </div>
+
+            <div class="result-row">
+              <span>Tests Taken</span>
+              <strong id="testsTaken">0</strong>
+            </div>
+          </section>
+
+          <div class="actions-panel">
+            <button type="button" class="start-btn" id="startBtn">
+              <i data-lucide="play"></i>
+              <span>Start Test</span>
+            </button>
+
+            <button type="button" class="reset-btn" id="resetBtn">
+              <i data-lucide="rotate-ccw"></i>
+              <span>Reset</span>
+            </button>
+
+            <div class="typing-tip">
+              <i data-lucide="lightbulb"></i>
+
+              <span> Tip: Focus on accuracy, speed will come naturally! </span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
