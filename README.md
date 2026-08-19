@@ -6,7 +6,7 @@ Test your typing speed in real time while tracking **WPM, accuracy, mistakes and
 
 ## 🚀 Live Demo
 
-🌐 **[Launch Typing Speed Tester](https://github.com/JohnYisBackk/js-typing-speed-tester.git)**
+🌐 **[Launch Typing Speed Tester](https://johnyisbackk.github.io/js-typing-speed-tester/)**
 
 Try the application directly in your browser.
 
